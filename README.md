@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Inna Bali Heritage Lens
 
-## Getting Started
+Prototipe antarmuka website imersif INNA Bali Heritage Hotel (dulu Bali Hotel, 1928) untuk INNA Heritage Business Idea Challenge 2026. Hanya frontend: semua data statis di `src/data/`, keranjang dan pesanan disimpan di React state + `localStorage`, tanpa pembayaran sungguhan.
 
-First, run the development server:
+## Menjalankan
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # cek sebelum demo
+npm run start    # server produksi
+npm run lint
+npm run format
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Alur demo
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Beranda, geser lensa, Jelajahi 3D/360°, Suite 77, buka 3 titik cerita, teaser "Lihat paket", Jejak Bung Karno, pilih tanggal, tambah ke keranjang, checkout (QRIS), e-voucher, `/pesanan`.
+2. `/kamar`, isi tanggal, Deluxe Garden View dengan sarapan, Lewati add-on, checkout.
+3. `/heritage-box`, Kirim sebagai hadiah, isi penerima, keranjang.
+4. `/heritage-gift`, Rp500.000, isi penerima, pratinjau, keranjang, checkout. Kode demo `LENS-7K2Q-1928` memotong Rp250.000.
+5. Gek Inna (kanan bawah, semua halaman): "Sejarah Suite 77", lalu ketik "berapa harga kamar".
+6. `/jelajahi/suite-77`: Mode VR (layar terbelah) dan "Lihat di ruanganmu (AR)".
+7. `/passport`: tekan "Saya di lokasi ini" di 10 titik untuk sertifikat.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Untuk mengulang demo dari awal, hapus data situs (localStorage berawalan `ibhl:`) di browser.
 
-## Learn More
+## Gambar
 
-To learn more about Next.js, take a look at the following resources:
+Semua 50 slot foto terisi foto berlisensi terbuka (Wikimedia Commons dan Openverse/Flickr): 30 foto asli atau arsip Bali Hotel dan lokasi sekitarnya, serta 20 foto ilustrasi yang diberi label "Foto ilustrasi" dan perlu diganti dengan foto resmi hotel. Daftar, status, dan cara menggantinya ada di [GAMBAR.md](GAMBAR.md). Atribusi lengkap ada di halaman `/kredit`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Struktur
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Lihat `CLAUDE.md` untuk spesifikasi lengkap, sistem desain, dan struktur folder.
